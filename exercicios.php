@@ -426,11 +426,13 @@
         <div>
             <?php
             echo "<br>";
-            echo "<h1>Resultados dos Exercícios de PHP dos numeros de 12-16</h1>";
+            echo "<h1>Resultados dos Exercícios de PHP dos numeros de 12-17</h1>";
+            echo "<br>";
+            echo "<h1>FOR</h1>";
             // ----------------------------------------------------
-            // Lista dos pares entre 0 e 10 (For)
+            // Exemplo : Lista dos pares entre 0 e 10 (For)
             echo "<div class='exercicio'>";
-            echo "<h3>Lista de pares entre 0 e 10(For)</h3>";
+            echo "<h3>Exercicio de Exemplo :Lista de pares entre 0 e 10(For)</h3>";
             echo "<div class='resultado'>";
             for ($i = 0; $i <= 10; $i += 2) {
                 echo "<strong>$i</strong> ";
@@ -438,9 +440,166 @@
             echo "</div>";
             echo "</div>";
 
+            // ----------------------------------------------------
+            // Exercício 12:  Contagem 1-10 (For)
+            echo "<div class='exercicio'>";
+            echo "<h3>Contagem 1-10</h3>";
+            echo "<div class='resultado'>";
+            for ($i = 1; $i <= 10; $i += 1) {
+                echo "<strong>$i</strong> ";
+            }
+            echo "</div>";
+            echo "</div>";
 
 
-            // Fim do bloco PHP
+
+            // ----------------------------------------------------
+            // Exercício 13:   Pares de 1 a 20(For)
+            echo "<div class='exercicio'>";
+            echo "<h3>Pares de 1 a 20</h3>";
+            echo "<div class='resultado'>";
+            for ($i = 1; $i <= 20; $i += 1) {
+                if ($i % 2 == 0) {
+                    echo "<strong>$i</strong> ";
+                }
+            }
+            echo "</div>";
+            echo "</div>";
+
+            // ----------------------------------------------------
+            // Exercício 14:   Tabuada(For)
+            echo "<div class='exercicio'>";
+            echo "<h3>Tabuada</h3>";
+            echo "<div class='resultado'>";
+            $numMulti = 8;
+            echo "Valor a ser multiplicado <code>$numMulti</code><br>";
+            for ($i = 0; $i <= 10; $i += 1) {
+                $res = $numMulti * $i;
+                echo "<strong>$numMulti x $i = $res</strong> <br>";
+            }
+            echo "</div>";
+            echo "</div>";
+
+            echo "<br>";
+
+            echo "<h1>WHILE</h1>";
+
+
+
+            // ----------------------------------------------------
+            // Exercício 15:  Contagem Regressiva(While)
+
+            echo "<div class='exercicio'>";
+            echo "<h3>Contagem Regressiva</h3>";
+            echo "<div class='resultado'>";
+            $contador = 10;
+            while ($contador >= 0) {
+                echo "<strong>Contagem :</strong> <code>$contador</code><br>";
+                $contador--;
+            }
+            echo "</div>";
+            echo "</div>";
+
+
+            // ----------------------------------------------------
+            // Exercício 16:  Soma até 100(While)
+
+            echo "<div class='exercicio'>";
+            echo "<h3>Soma até 100</h3>";
+            echo "<div class='resultado'>";
+            $contador2 = 1;
+            $soma = 0;
+            while ($contador2 <= 100) {
+                $soma += $contador2;
+                $contador2++;
+            }
+            echo "<strong>Resultado : <code>$soma</code></strong><br>";
+            echo "</div>";
+            echo "</div>";
+
+
+            echo "<br>";
+
+            echo "<h1>DO-WHILE</h1>";
+
+            echo "<div class='exercicio'>";
+            echo "<h3>Soma até 100</h3>";
+            echo "<div class='resultado'>";
+
+            // Inicializa o contador de tentativas
+            $tentativas = 0;
+
+            do {
+                // Sorteia um número entre 1 e 10
+                $numeroSorteado = rand(1, 10);
+
+                // Incrementa o contador a cada tentativa
+                $tentativas++;
+
+                // Opcional: exibe o número sorteado em cada iteração
+                echo "<Strong>Tentativa {$tentativas}: Número sorteado = {$numeroSorteado}</Strong><br>";
+            } while ($numeroSorteado != 5); // Continua executando ENQUANTO o número for diferente de 5
+
+            // Exibe o resultado final
+            echo "<br>O número <strong>5</strong> foi encontrado após <code>$tentativas</code> tentativa(s)!";
+
+            echo  "</div>";
+            echo  "</div>";
+
+            ?>
+        </div>
+
+        <div>
+            <?php
+            echo "<br>";
+            echo "<h1>Resultados dos Exercícios de PHP dos numeros de 18-20</h1>";
+            echo "<br>";
+            echo "<h1>Arrays</h1>";
+            // ----------------------------------------------------
+            // Exercício 18:   Lista de Frutas 
+
+            echo "<div class='exercicio'>";
+            echo "<h3>Lista de Frutas</h3>";
+            $frutas = array("Maçã", "Banana", "Laranja", "Uva", "Abacaxi");
+            echo "<div class='resultado'>";
+            foreach ($frutas as $fruta) {
+                echo "<strong>$fruta</strong><br>";
+            }
+            echo "</div>";
+            echo "</div>";
+
+            // ----------------------------------------------------
+            // Exercício: Soma de Array
+
+            echo "<div class='exercicio'>";
+            echo "<h3>Soma de Array</h3>";
+
+            $numeros = array(10, 20, 30, 40, 50);
+            $soma = array_sum($numeros);
+
+            echo "<div class='resultado'>";
+            echo "A soma total dos números é: <strong>$soma</strong>";
+            echo "</div>";
+            echo "</div>";
+
+            // ----------------------------------------------------
+            // Exercício 20: Array Associativo
+
+            echo "<div class='exercicio'>";
+            echo "<h3>20. Array Associativo</h3>";
+
+            $aluno = array(
+                "nome" => "Carlos Silva",
+                "idade" => 22,
+                "curso" => "Análise e Desenvolvimento de Sistemas"
+            );
+
+            echo "<div class='resultado'>";
+            echo "Nome: [<strong>" . $aluno['nome'] . "</strong>]<br>";
+            echo "Idade: [<strong>" . $aluno['idade'] . "</strong>]<br>";
+            echo "Curso: [<strong>" . $aluno['curso'] . "</strong>]<br>";
+            echo "</div>";
+            echo "</div>";
             ?>
         </div>
     </div>
